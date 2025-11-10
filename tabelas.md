@@ -34,8 +34,31 @@ Abaixo está um exemplo completo de como criar e estilizar a tabela para a disci
                 <th>Tecnologias</th>
                 <th>Conceitos</th>
             </tr>
-        </thead>
+            <tr>
+                <th>---</th>
+                <th>---</th>
+                <th>Conceitos</th>
+            </tr>
+                    </thead>
         <tbody>
+           <tr>
+                <td>Web Design</td>
+                <td>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>GitHub</li>
+                        <li>VS Code</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Controle de versão de código</li>
+                        <li>Design de interfaces</li>
+                    </ul>
+                </td>
+            </tr>
             <tr>
                 <td>Web Design</td>
                 <td>
