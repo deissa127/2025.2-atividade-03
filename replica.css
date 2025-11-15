@@ -1,0 +1,423 @@
+/* Reset e Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis CSS */
+:root {
+    --sidebar-bg: #f9f9fa; /* Cor de fundo mais fiel para a sidebar */
+    --main-bg: #f7f9fd; /* Cor de fundo suave para o conteúdo principal */
+    --sidebar-width: 280px;
+    --primary-color: #1a73e8; /* Azul do Google */
+    --text-primary: #202124;
+    --text-secondary: #5f6368;
+    --hover-bg: #e8eaed;
+    --border-color: #dadce0;
+    --white: #ffffff;
+    --input-bg-light: #e8f0fe; /* Cor de fundo do botão "Nova Conversa" */
+}
+
+body {
+    font-family: 'Google Sans', 'Roboto', Arial, sans-serif;
+    color: var(--text-primary);
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    background-color: var(--main-bg); /* Fundo suave */
+}
+
+/* Barra Lateral */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--sidebar-bg);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-right: 1px solid var(--border-color);
+    overflow-y: auto;
+    flex-shrink: 0; /* Evita que a sidebar encolha */
+}
+
+.sidebar-header {
+    padding: 0;
+    margin-bottom: 8px;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--text-secondary);
+    transition: background-color 0.2s;
+}
+
+.menu-btn:hover {
+    background-color: var(--hover-bg);
+}
+
+/* Nova Conversa */
+.new-chat {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+.new-chat-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--input-bg-light); /* Fundo azul claro */
+    border: none;
+    border-radius: 28px; /* Mais arredondado */
+    cursor: pointer;
+    font-size: 15px; /* Tamanho ajustado */
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.new-chat-btn:hover {
+    background-color: var(--hover-bg);
+}
+
+.expand-btn {
+    padding: 12px;
+    background: var(--input-bg-light);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: background-color 0.2s;
+}
+
+.expand-btn .material-symbols-rounded {
+    transform: rotate(90deg); /* Rotação para a seta de expansão */
+    font-size: 20px;
+}
+
+.expand-btn:hover {
+    background-color: var(--hover-bg);
+}
+
+/* Veja alguns Gems */
+.gems-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background: none;
+    border: none;
+    border-radius: 28px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-primary);
+    transition: background-color 0.2s;
+    text-align: left;
+}
+
+.gems-btn:hover {
+    background-color: var(--hover-bg);
+}
+
+.gem-icon {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-variation-settings: 'FILL' 1; /* Preenche o ícone de diamante */
+}
+
+/* Seção Recentes */
+.recent-section {
+    flex: 1;
+    margin-top: 24px;
+    overflow-y: auto;
+}
+
+.recent-section h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 0 16px 8px;
+}
+
+.recent-list {
+    list-style: none;
+}
+
+.recent-list a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 28px;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncamento de texto */
+}
+
+.recent-list a:hover {
+    background-color: var(--hover-bg);
+}
+
+.chat-icon {
+    font-size: 20px;
+}
+
+/* Rodapé da Sidebar */
+.sidebar-footer {
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.settings-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background: none;
+    border: none;
+    border-radius: 28px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-secondary);
+    transition: background-color 0.2s;
+    text-align: left;
+}
+
+.settings-btn:hover {
+    background-color: var(--hover-bg);
+}
+
+.settings-btn .material-symbols-rounded {
+    font-size: 24px;
+}
+
+/* 2. Conteúdo Principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-bg);
+    overflow: hidden;
+}
+
+/* Barra Superior */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    min-height: 64px;
+    background-color: var(--white);
+    /* Adicionar sombra sutil em vez de borda */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); 
+}
+
+.top-bar-left,
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-btn {
+    /* Estilo de botão de ícone */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--text-secondary);
+    transition: background-color 0.2s;
+}
+
+.search-btn:hover {
+    background-color: var(--hover-bg);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.upgrade-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--hover-bg);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.upgrade-btn:hover {
+    background-color: var(--border-color);
+}
+
+.star-icon {
+    color: #ffc400; /* Cor amarela/dourada para o sparkle */
+    font-variation-settings: 'FILL' 1;
+    font-size: 20px;
+}
+
+.profile-pic {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%; /* Foto de perfil circular */
+    background-color: #a0c3ff; /* Fundo azul claro */
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* 3. Área Principal de Chat */
+.chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo (mensagem de boas-vindas) */
+    padding: 32px;
+    position: relative;
+    overflow-y: auto;
+}
+
+.welcome-message {
+    margin-bottom: 200px; /* Garante que a mensagem fique no centro visual */
+}
+
+.welcome-message h2 {
+    font-size: 48px; /* Tamanho grande */
+    font-weight: 400;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.welcome-message .user-name {
+    color: var(--primary-color); /* Nome em azul */
+}
+
+/* Campo de Entrada */
+.input-container {
+    width: 100%;
+    position: absolute; /* Posicionamento absoluto dentro de chat-area */
+    bottom: 40px; /* Afastamento do rodapé */
+    display: flex;
+    justify-content: center;
+}
+
+.input-box {
+    background-color: var(--white);
+    border-radius: 28px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 80%;
+    max-width: 900px; /* Limite de largura para o campo */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); /* Sombra sutil */
+}
+
+.chat-input {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: var(--text-primary);
+    padding: 8px 0; /* Ajuste para centralização vertical */
+}
+
+.chat-input::placeholder {
+    color: var(--text-secondary);
+}
+
+.input-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Estilo para Botões de Ação (Ícones) */
+.action-btn,
+.mic-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    color: var(--text-secondary);
+    transition: background-color 0.2s;
+}
+
+.action-btn:hover,
+.mic-btn:hover {
+    background-color: var(--hover-bg);
+}
+
+.action-btn .material-symbols-rounded,
+.mic-btn .material-symbols-rounded {
+    font-size: 24px;
+}
+
+/* Estilo para Botões "Chip" */
+.tools-btn,
+.version-selector {
+    background-color: var(--hover-bg);
+    color: var(--text-secondary);
+    border: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.2s;
+}
+
+.tools-btn:hover,
+.version-selector:hover {
+    background-color: var(--border-color);
+}
+
+.tools-btn .material-symbols-rounded {
+    font-size: 18px;
+}
+
+/* Estilização específica do seletor de versão */
+.version-selector {
+    background-color: var(--input-bg-light); /* Fundo azul claro para destaque */
+    color: var(--primary-color);
+    font-weight: 600;
+    padding-right: 8px; /* Ajuste para o ícone */
+}
+
+.version-selector .material-symbols-rounded {
+    font-size: 18px;
+}
